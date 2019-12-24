@@ -17,10 +17,10 @@ spec:
         deploymentconfig: uploader
     spec:
       containers:
-      - image: docker.io/bitnami/nginx
+      - image: nginxinc/nginx-unprivileged:latest
         name: nginx
         volumeMounts:
-        - mountPath: /opt/bitnami/nginx/conf/server_blocks/
+        - mountPath: /etc/nginx/conf.d/
           name: my-nginx-conf
         - mountPath: /fileuploads
           name: staticfiles
