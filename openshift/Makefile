@@ -1,6 +1,6 @@
 SECRET_KEY := $(shell openssl rand -base64 20)
 HTPASSWD_FILE := configs/osinstall.htpasswd
-APP_NAME := openshift4-nightly-reinstall
+APP_NAME := uploader
 
 ifeq ("$(wildcard $(HTPASSWD_FILE))","")
     $(error $(HTPASSWD_FILE) does not exist, create one with `htpasswd`)

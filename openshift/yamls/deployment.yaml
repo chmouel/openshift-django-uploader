@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: openshift4-nightly-reinstall
-  name: openshift4-nightly-reinstall
+    app: uploader
+  name: uploader
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: openshift4-nightly-reinstall
-      deploymentconfig: openshift4-nightly-reinstall
+      app: uploader
+      deploymentconfig: uploader
   template:
     metadata:
       labels:
-        app: openshift4-nightly-reinstall
-        deploymentconfig: openshift4-nightly-reinstall
+        app: uploader
+        deploymentconfig: uploader
     spec:
       containers:
       - image: docker.io/bitnami/nginx
@@ -33,7 +33,7 @@ spec:
           value: %SECRET_KEY%
         command: ["gunicorn", "osinstall.wsgi", "--bind=0.0.0.0:9000", "--access-logfile=-", "--reload"]
         image: %IMAGE%
-        name: openshift4-nightly-reinstall
+        name: uploader
         volumeMounts:
         - mountPath: /opt/app-root/src/fileuploads
           name: staticfiles

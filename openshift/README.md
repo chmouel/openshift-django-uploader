@@ -30,13 +30,13 @@ django `SECRET_KEY` is automatically generated.
 Get the route of your deployment with :
 
 ```shell
-oc get route openshift4-nightly-reinstall -o jsonpath='{.spec.host}'`
+oc get route uploader -o jsonpath='{.spec.host}'`
 ```
 
 Test if it's working with :
 
 ```shell
-route=http://$(oc get route openshift4-nightly-reinstall -o jsonpath='{.spec.host}')
+route=http://$(oc get route uploader -o jsonpath='{.spec.host}')
 echo "HELLO WORLD" > /tmp/hello.txt
 curl -u username:password -F path=hello-upload.txt -X POST -F file=@/tmp/hello.txt \
     ${route}/upload

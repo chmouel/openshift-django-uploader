@@ -2,13 +2,13 @@ apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   labels:
-    app: openshift4-nightly-reinstall
-  name: openshift4-nightly-reinstall
+    app: uploader
+  name: uploader
 spec:
   output:
     to:
       kind: ImageStreamTag
-      name: openshift4-nightly-reinstall:latest
+      name: uploader:latest
   source:
     git:
       uri: https://github.com/chmouel/openshift-django-uploader/
