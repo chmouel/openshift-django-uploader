@@ -24,6 +24,8 @@ deploy: reconfig
         -e "s,%IMAGE%,$${IMAGE}," yamls/deployment.yaml | \
 	oc create -f -
 	oc expose service/$(APP_NAME) 2>/dev/null || true
+	@echo "App deployed to: "
+	@echo http://`oc get route ${APP_NAME} -o jsonpath='{.spec.host}'`
 
 build:
 	@oc delete -f yamls/imagestream.yaml 2>/dev/null || true
