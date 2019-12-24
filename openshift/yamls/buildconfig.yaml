@@ -10,9 +10,8 @@ spec:
       kind: ImageStreamTag
       name: openshift4-nightly-reinstall:latest
   source:
-    contextDir: os4-simple-uploader
     git:
-      uri: https://github.com/chmouel/openshift4-nightly-reinstall
+      uri: https://github.com/chmouel/openshift-django-uploader/
     type: Git
   strategy:
     sourceStrategy:
@@ -21,9 +20,3 @@ spec:
         name: python:3.6
         namespace: openshift
     type: Source
-  triggers:
-  - type: ConfigChange
-  - imageChange: {}
-    type: ImageChange
-status:
-  lastVersion: 0
