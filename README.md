@@ -1,6 +1,6 @@
-***I am now moved into https://github.com/chmouel/go-simple-uploader**
+# I am now moved into https://github.com/chmouel/go-simple-uploader
 
-# Simple django3 application to upload files
+### Simple django3 application to upload files
 
 This has been designed to work on openshift, head over the
 [openshift](openshift/) directory for template and deployment `Makefile`.
@@ -8,9 +8,9 @@ This has been designed to work on openshift, head over the
 See in [examples](examples/) for an configuration over
 uwsgi/nginx/systemd/htpasswd
 
-## Author:
+#### Author:
 [Chmouel Boudjnah](http://github.com/chmouel)
 
-## License
+#### License
 
 Apache 2.0
