@@ -1,3 +1,5 @@
+***I am now moved into https://github.com/chmouel/go-simple-uploader**
+
 # Simple django3 application to upload files
 
 This has been designed to work on openshift, head over the
